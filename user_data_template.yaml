@@ -54,13 +54,6 @@ write_files:
     docker run -v $OUT_DIR:/root/rasp/$RASP_NAME/OUT/ -v $LOG_DIR:/root/rasp/$RASP_NAME/LOG/ --rm -e START_HOUR=$START_HOUR $DOCKER_IMAGE
     echo "Finished $RASP_NAME job for $START_HOUR hr"
     if [ "$(ls -A $OUT_DIR)" ]; then
-        SSH_KEY=$(curl http://metadata/computeMetadata/v1/instance/attributes/private-key -H "Metadata-Flavor: Google")
-        touch /home/chrisdobinson/.ssh/id_rsa
-        chown chrisdobinson:chrisdobinson /home/chrisdobinson/.ssh/id_rsa
-        chmod 0600 /home/chrisdobinson/.ssh/id_rsa
-        cat >/home/chrisdobinson/.ssh/id_rsa <<EOL
-        ${SSH_KEY}
-        EOL
         rsync -e "ssh -i /home/chrisdobinson/.ssh/id_rsa" -rvz "$OUT_DIR/" "$HOST:/home/public/$RASP_DIR/$OUT/FCST_/" \
             && ssh -i /home/chrisdobinson/.ssh/id_rsa $HOST "rm -rf $RASP_DIR/$OUT/FCST ; mv $RASP_DIR/$OUT/FCST_ $RASP_DIR/$OUT/FCST" ;
     else
