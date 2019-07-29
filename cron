@@ -23,21 +23,26 @@
 #
 # m h  dom mon dow   command
 
+
 ########### MORNING RUN ######################
-40 15 * * * echo hello
+40 15 * * * ssh 104.196.228.245 exit
 41 15 * * * python ~/create_instance.py seq.cfg 0 asto-seq0 >> ~/LOGS/morning0.log 
-50 15 * * * echo hello
+50 15 * * * ssh 104.196.228.245 exit
 51 15 * * * python ~/create_instance.py seq.cfg 1 asto-seq1 >> ~/LOGS/morning1.log 
-50 15 * * * echo hello
+50 15 * * * ssh 104.196.228.245 exit
 51 15 * * * python ~/create_instance.py seq.cfg 2 asto-seq2 >> ~/LOGS/morning2.log 
-50 16 * * * echo hello
+50 16 * * * ssh 104.196.228.245 exit
 31 16 * * * python ~/create_instance.py seq.cfg 6 asto-seq6 >> ~/LOGS/morning6.log 
 
+
 ########## ARVO RUN #################################
-40 03 * * * echo hello
+
+40 03 * * * ssh 104.196.228.245 exit
 41 03 * * * python ~/create_instance.py seq.cfg 1 asto-seq1 >> ~/LOGS/arvo1.log 
-00 04 * * * echo hello
+00 04 * * * ssh 104.196.228.245 exit
 01 04 * * * python ~/create_instance.py seq.cfg 3 asto-seq3 >> ~/LOGS/arvo3.log 
 
 
+########## MOVE DAYS ###########################
 00 14 * * * ~/move_days
+
