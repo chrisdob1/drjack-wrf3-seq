@@ -30,10 +30,10 @@ write_files:
     i=${DAY}
 
 
-    if [ $(date -u +%H) -ge "18" ] || [ $(date -u +%H) -lt "12" ]; then
+   if [ $(date -u +%H) -ge "12" ]; then
         let "START_HOUR = $i * 24 + 18";
     else
-        let "START_HOUR = $i * 24 + 18";
+        let "START_HOUR = ($i - 1) * 24 + 18";
     fi
     
 
