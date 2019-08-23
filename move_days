@@ -1,10 +1,10 @@
-ssh -i ~/.ssh/id_rsa cdobinson_ausrasp@ssh.phx.nearlyfreespeech.net "rm -rf SEQ/OUT+0/FCST/* ; rm -rf NSW/OUT+0/FCST/* ; rm -rf VIC/OUT+0/FCST/*"
+ssh -i ~/.ssh/id_rsa cdobinson_ausrasp@ssh.phx.nearlyfreespeech.net "rm -rf SEQ/OUT+0/FCST/* ; rm -rf NSW/OUT+0/FCST/* ; rm -rf VIC/OUT+0/FCST/* ; rm -rf TAS/OUT+0/FCST/*"
 wait $!
-ssh -i ~/.ssh/id_rsa cdobinson_ausrasp@ssh.phx.nearlyfreespeech.net "mv -f SEQ/OUT+1/FCST/* SEQ/OUT+0/FCST/ ; mv -f NSW/OUT+1/FCST/* NSW/OUT+0/FCST/ ; mv -f VIC/OUT+1/FCST/* VIC/OUT+0/FCST/ "
+ssh -i ~/.ssh/id_rsa cdobinson_ausrasp@ssh.phx.nearlyfreespeech.net "mv -f SEQ/OUT+1/FCST/* SEQ/OUT+0/FCST/ ; mv -f NSW/OUT+1/FCST/* NSW/OUT+0/FCST/ ; mv -f VIC/OUT+1/FCST/* VIC/OUT+0/FCST/ ; mv -f TAS/OUT+1/FCST/* TAS/OUT+0/FCST/ "
 wait $!
-ssh -i ~/.ssh/id_rsa cdobinson_ausrasp@ssh.phx.nearlyfreespeech.net "mv -f SEQ/OUT+2/FCST/* SEQ/OUT+1/FCST/ ; mv -f NSW/OUT+2/FCST/* NSW/OUT+1/FCST/ ; mv -f VIC/OUT+2/FCST/* VIC/OUT+1/FCST/ "
+ssh -i ~/.ssh/id_rsa cdobinson_ausrasp@ssh.phx.nearlyfreespeech.net "mv -f SEQ/OUT+2/FCST/* SEQ/OUT+1/FCST/ ; mv -f NSW/OUT+2/FCST/* NSW/OUT+1/FCST/ ; mv -f VIC/OUT+2/FCST/* VIC/OUT+1/FCST/ ; mv -f TAS/OUT+2/FCST/* TAS/OUT+1/FCST/ "
 wait $!
-ssh -i ~/.ssh/id_rsa cdobinson_ausrasp@ssh.phx.nearlyfreespeech.net "mv -f SEQ/OUT+3/FCST/* SEQ/OUT+2/FCST/ ; mv -f NSW/OUT+3/FCST/* NSW/OUT+2/FCST/ ; mv -f VIC/OUT+3/FCST/* VIC/OUT+2/FCST/ "
+ssh -i ~/.ssh/id_rsa cdobinson_ausrasp@ssh.phx.nearlyfreespeech.net "mv -f SEQ/OUT+3/FCST/* SEQ/OUT+2/FCST/ ; mv -f NSW/OUT+3/FCST/* NSW/OUT+2/FCST/ ; mv -f VIC/OUT+3/FCST/* VIC/OUT+2/FCST/ ; mv -f TAS/OUT+3/FCST/* TAS/OUT+2/FCST/ "
 wait $!
 ssh -i ~/.ssh/id_rsa cdobinson_ausrasp@ssh.phx.nearlyfreespeech.net "mv -f SEQ/OUT+4/FCST/* SEQ/OUT+3/FCST/"
 wait $!
