@@ -24,18 +24,18 @@
 # m h  dom mon dow   command
 
 
-
 ########### MORNING RUN ######################
 40 15 * * * ssh -i ~/.ssh/google_compute_engine 35.232.245.138 exit
 41 15 * * * python ~/create_instance.py seq.cfg 0 asto-seq0 >> ~/LOGS/morning0.log 
 41 15 * * * python ~/create_instance.py nsw.cfg 0 asto-nsw0 >> ~/LOGS/nswm0.log 
 41 15 * * * python ~/create_instance.py vic.cfg 0 asto-vic0 >> ~/LOGS/vicm0.log 
-
+41 15 * * * python ~/create_instance.py tas.cfg 0 asto-tas0 >> ~/LOGS/morning0.log 
 
 50 15 * * * ssh -i ~/.ssh/google_compute_engine 35.232.245.138 exit
 10 16 * * * python ~/create_instance.py seq.cfg 1 asto-seq1 >> ~/LOGS/morning1.log 
 10 16 * * * python ~/create_instance.py nsw.cfg 1 asto-nsw1 >> ~/LOGS/nswm1.log
 10 16 * * * python ~/create_instance.py vic.cfg 1 asto-vic1 >> ~/LOGS/vicm1.log
+10 16 * * * python ~/create_instance.py tas.cfg 1 asto-tas1 >> ~/LOGS/tas1.log
 
 #50 16 * * * ssh -i ~/.ssh/google_compute_engine 35.232.245.138 exit
 #51 16 * * * python ~/create_instance.py seq.cfg 2 asto-seq2 >> ~/LOGS/morning2.log 
@@ -47,6 +47,7 @@
 #51 17 * * * python ~/create_instance.py seq.cfg 2 asto-seq2 >> ~/LOGS/morning2.log 
 01 17 * * * python ~/create_instance.py nsw.cfg 3 asto-nsw3 >> ~/LOGS/nswm3.log 
 01 17 * * * python ~/create_instance.py vic.cfg 3 asto-vic3 >> ~/LOGS/vicm3.log
+01 17 * * * python ~/create_instance.py tas.cfg 3 asto-tas3 >> ~/LOGS/tasm3.log
 
 30 17 * * * ssh -i ~/.ssh/google_compute_engine 35.232.245.138 exit
 32 17 * * * python ~/create_instance.py seq.cfg 6 asto-seq6 >> ~/LOGS/morning6.log 
@@ -57,6 +58,7 @@
 41 03 * * * python ~/create_instance.py seq.cfg 1 asto-seq1 >> ~/LOGS/arvo1.log 
 41 03 * * * python ~/create_instance.py nsw.cfg 1 asto-nsw1 >> ~/LOGS/nswa1.log
 41 03 * * * python ~/create_instance.py vic.cfg 1 asto-vic1 >> ~/LOGS/vica1.log
+41 03 * * * python ~/create_instance.py tas.cfg 1 asto-tas1 >> ~/LOGS/tasa1.log
 
 10 04 * * * ssh -i ~/.ssh/google_compute_engine 35.232.245.138 exit
 11 04 * * * python ~/create_instance.py seq.cfg 3 asto-seq3 >> ~/LOGS/arvo3.log 
@@ -64,3 +66,4 @@
 
 ########## MOVE DAYS ###########################
 00 14 * * * ~/move_days
+
