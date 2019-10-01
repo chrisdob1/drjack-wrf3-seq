@@ -61,7 +61,7 @@ write_files:
     echo "Finished $RASP_NAME job for $START_HOUR hr"
 
     if [ "$(ls -A $OUT_DIR)" ]; then
-        rsync -e "ssh -i /home/chrisdobinson/.ssh/id_rsa" -rvz "$OUT_DIR/" "$HOST:/home/public/$RASP_DIR/$OUT/FCST_/" \
+        scp -i /home/chrisdobinson/.ssh/id_rsa -r "$OUT_DIR/*" "$HOST:/home/public/$RASP_DIR/$OUT/FCST_/" \
             && ssh -i /home/chrisdobinson/.ssh/id_rsa $HOST "rm -rf $RASP_DIR/$OUT/FCST ; mv $RASP_DIR/$OUT/FCST_ $RASP_DIR/$OUT/FCST" ;
     else
         echo "$OUT_DIR is Empty"
