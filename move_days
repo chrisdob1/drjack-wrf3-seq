@@ -6,8 +6,8 @@ ssh -i ~/.ssh/id_rsa cdobinson_ausrasp@ssh.phx.nearlyfreespeech.net "mv -f SEQ/O
 wait $!
 ssh -i ~/.ssh/id_rsa cdobinson_ausrasp@ssh.phx.nearlyfreespeech.net "mv -f SEQ/OUT+3/FCST/* SEQ/OUT+2/FCST/ ; mv -f VIC/OUT+3/FCST/* VIC/OUT+2/FCST/ ; mv -f TAS/OUT+3/FCST/* TAS/OUT+2/FCST/ ; mv -f SA/OUT+3/FCST/* SA/OUT+2/FCST/ ; mv -f NSWNORTH/OUT+3/FCST/* NSWNORTH/OUT+2/FCST/ ; mv -f NSWSOUTH/OUT+3/FCST/* NSWSOUTH/OUT+2/FCST/ "
 wait $!
-ssh -i ~/.ssh/id_rsa cdobinson_ausrasp@ssh.phx.nearlyfreespeech.net "mv -f SEQ/OUT+4/FCST/* SEQ/OUT+3/FCST/ ; mv -f NSWNORTH/OUT+4/FCST/* NSWNORTH/OUT+3/FCST ; mv -f NSWSOUTH/OUT+4/FCST/* NSWSOUTH/OUT+3/FCST" ; mv -f VIC/OUT+4/FCST/* VIC/OUT+3/FCST "
+ssh -i ~/.ssh/id_rsa cdobinson_ausrasp@ssh.phx.nearlyfreespeech.net "mv -f SEQ/OUT+4/FCST/* SEQ/OUT+3/FCST/ ; mv -f NSWNORTH/OUT+4/FCST/* NSWNORTH/OUT+3/FCST/ ; mv -f NSWSOUTH/OUT+4/FCST/* NSWSOUTH/OUT+3/FCST/ " ; mv -f VIC/OUT+4/FCST/* VIC/OUT+3/FCST/ "
 wait $!
-ssh -i ~/.ssh/id_rsa cdobinson_ausrasp@ssh.phx.nearlyfreespeech.net "mv -f SEQ/OUT+5/FCST/* SEQ/OUT+4/FCST/ ; mv -f NSWNORTH/OUT+5/FCST/* NSWNORTH/OUT+4/FCST ; mv -f NSWSOUTH/OUT+5/FCST/* NSWSOUTH/OUT+4/FCST" ; mv -f VIC/OUT+5/FCST/* VIC/OUT+4/FCST" 
+ssh -i ~/.ssh/id_rsa cdobinson_ausrasp@ssh.phx.nearlyfreespeech.net "mv -f SEQ/OUT+5/FCST/* SEQ/OUT+4/FCST/ ; mv -f NSWNORTH/OUT+5/FCST/* NSWNORTH/OUT+4/FCST/ ; mv -f NSWSOUTH/OUT+5/FCST/* NSWSOUTH/OUT+4/FCST/ " ; mv -f VIC/OUT+5/FCST/* VIC/OUT+4/FCST/ " 
 wait $!
-ssh -i ~/.ssh/id_rsa cdobinson_ausrasp@ssh.phx.nearlyfreespeech.net "mv -f SEQ/OUT+6/FCST/* SEQ/OUT+5/FCST/ ; mv -f NSWNORTH/OUT+6/FCST/* NSWNORTH/OUT+5/FCST ; mv -f NSWSOUTH/OUT+6/FCST/* NSWSOUTH/OUT+5/FCST" ; mv -f VIC/OUT+6/FCST/* VIC/OUT+5/FCST"
+ssh -i ~/.ssh/id_rsa cdobinson_ausrasp@ssh.phx.nearlyfreespeech.net "mv -f SEQ/OUT+6/FCST/* SEQ/OUT+5/FCST/ ; mv -f NSWNORTH/OUT+6/FCST/* NSWNORTH/OUT+5/FCST/ ; mv -f NSWSOUTH/OUT+6/FCST/* NSWSOUTH/OUT+5/FCST/ " ; mv -f VIC/OUT+6/FCST/* VIC/OUT+5/FCST/ "
